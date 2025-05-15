@@ -1,0 +1,8 @@
+1. Create notebook.ipynb
+2. Create src\data_collection.py 
+
+
+
+
+Comment
+1. python src/data_collection.py
