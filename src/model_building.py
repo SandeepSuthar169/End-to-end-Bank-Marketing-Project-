@@ -23,7 +23,9 @@ prepro= ColumnTransformer(transformers=[
 
 pipe = Pipeline(steps =[
         ('prepro', prepro),
-        ("classi", RandomForestClassifier())
+        ("classi", RandomForestClassifier(
+            n_estimators=500
+            ))
     ])
     
  
