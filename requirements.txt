@@ -1,0 +1,10 @@
+numpy 
+pandas
+matplotlib
+seaborn
+scikit-learn
+mlflow
+dvc
+dvclive
+dvc[all]==3.48.4
+pygit2==1.12.2
