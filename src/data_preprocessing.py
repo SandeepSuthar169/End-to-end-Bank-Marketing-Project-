@@ -6,8 +6,10 @@ from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.pipeline import Pipeline
 
-train_data = pd.read_csv("./data/raw/train.csv")
-test_data = pd.read_csv("./data/raw/test.csv")
+
+
+def load_data(filepath: str) ->pd.DataFrame:
+    return pd.read_csv(filepath)
 
 
 def columns_label_encoding(df):
@@ -58,11 +60,52 @@ def columns_label_encoding(df):
     df['contact'] = df['contact'].astype(int)
     return df
 
-train_pro_data = columns_label_encoding(train_data)
-test_pro_data = columns_label_encoding(test_data)
+def  save_data(df: pd.DataFrame, filepath) -> None:
+    df.to_csv(filepath, index=False)
 
-data_path = os.path.join("data", "processed")
-os.makedirs(data_path)
+def main():
+    raw_data_path = "./data/raw"
+    preprocess_data_path = "./data/processed"
 
-train_pro_data.to_csv(os.path.join(data_path, "train_processed.csv"), index=False)
-test_pro_data.to_csv(os.path.join(data_path, "test_processed.csv"), index= False)
+    train_data = load_data(os.path.join(raw_data_path, "train.csv"))
+    test_data  = load_data(os.path.join(raw_data_path, "test.csv"))
+
+    train_pro_data = columns_label_encoding(train_data)
+    test_pro_data = columns_label_encoding(test_data)
+
+    os.makedirs(preprocess_data_path)
+
+    save_data(train_pro_data, os.path.join(preprocess_data_path, 'train_processed.csv'))
+    save_data(test_pro_data, os.path.join(preprocess_data_path, 'test_processed.csv'))
+
+
+if __name__ == "__main__":
+    main()    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# train_pro_data = columns_label_encoding(train_data)
+# test_pro_data = columns_label_encoding(test_data)
+
+# data_path = os.path.join("data", "processed")
+# os.makedirs(data_path)
+
+# train_pro_data.to_csv(os.path.join(data_path, "train_processed.csv"), index=False)
+# test_pro_data.to_csv(os.path.join(data_path, "test_processed.csv"), index= False)
