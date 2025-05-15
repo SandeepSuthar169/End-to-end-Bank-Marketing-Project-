@@ -10,9 +10,9 @@ import logging
 
 
 url = "https://raw.githubusercontent.com/SandeepSuthar169/Datasets/main/bank.csv"
-data = pd.read_csv(url)
+df = pd.read_csv(url)
 
-train_data, test_data = train_test_split(data, test_size=0.2, random_state=42)
+train_data, test_data = train_test_split(df, test_size=0.2, random_state=42)
 
 data_path = os.path.join('data', 'raw')
 
