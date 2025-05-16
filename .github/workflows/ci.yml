@@ -27,4 +27,4 @@ jobs:
 
     - name: Run pipeline
       run: |
-        python src/DVC_Pipeline.py
+        python src/data_collection.py
