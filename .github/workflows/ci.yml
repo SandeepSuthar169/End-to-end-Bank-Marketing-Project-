@@ -21,10 +21,12 @@ jobs:
 
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
         pip install -r requirements.txt
 
     - name: Run script or tests
       run: |
-        python src/DVC_Pipeline.py
-        # or pytest tests/
+        python src/data_collection.py
+        python src/data_preprocessing.py
+        python src/model_building.py
+        python src/model_evaluation.py
+     
