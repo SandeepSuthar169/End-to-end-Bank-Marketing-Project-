@@ -81,31 +81,4 @@ def main():
 
 if __name__ == "__main__":
     main()    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# train_pro_data = columns_label_encoding(train_data)
-# test_pro_data = columns_label_encoding(test_data)
-
-# data_path = os.path.join("data", "processed")
-# os.makedirs(data_path)
-
-# train_pro_data.to_csv(os.path.join(data_path, "train_processed.csv"), index=False)
-# test_pro_data.to_csv(os.path.join(data_path, "test_processed.csv"), index= False)
+    

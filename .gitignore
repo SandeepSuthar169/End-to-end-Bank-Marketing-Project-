@@ -1,4 +1,5 @@
 .venv
 /model.pkl
-/metrics.josn
-/metrics.json
+
+/mlartifacts
+/mlruns
