@@ -28,3 +28,7 @@ jobs:
     - name: Run pipeline
       run: |
         python src/data_collection.py
+        python src/data_preprocessing.py
+        python src/model_building.py
+        python src/model_evaluation.py
+
