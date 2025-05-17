@@ -13,7 +13,16 @@ End-to-end-Bank-Marketing-Project/
 │
 ├── src/                       # Source code
 │   ├── __init__.py
-│   ├── DVC_Pipeline.py        # Main pipeline script
+│   ├── DVC_Pipeline.py
+│   ├── Excrement_Tracking.ipynb
+│   ├── data_collection.py
+│   ├── data_preprocessing.py
+│   ├── dvc.yaml
+│   ├── model_building.py
+│   ├── model_evaluation.py
+│   │
+│   │
+│   │                          # Main pipeline script
 │   └── utils.py               # Utility functions (optional)
 │
 ├── tests/                     # Unit and integration tests
