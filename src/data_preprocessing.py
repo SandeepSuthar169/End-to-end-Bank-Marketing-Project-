@@ -6,12 +6,9 @@ from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.pipeline import Pipeline
 
-
-
 def load_data(filepath: str) ->pd.DataFrame:
     return pd.read_csv(filepath)
-
-
+    
 def columns_label_encoding(df):
     df['marital'] = df['marital'].replace({
     'divorced': 1,
